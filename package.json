@@ -1,0 +1,22 @@
+{
+  "name": "node-petri-project",
+  "version": "1.0.0",
+  "description": "In this project i will make an example to implements Petri's Net on Node.js. The scope of this project is sign up, login and api token authentication.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leomdesouza/node-petri-project.git"
+  },
+  "keywords": [
+    "petri-net"
+  ],
+  "author": "leomdesouza.lm@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leomdesouza/node-petri-project/issues"
+  },
+  "homepage": "https://github.com/leomdesouza/node-petri-project#readme"
+}
