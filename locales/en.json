@@ -3,6 +3,10 @@
     "mongooseConnect": "Connected to the database!",
     "listening": "Listening on ",
     "userCreated": "User has been created!",
-    "userNotCreated": "An error as Occured on the create user process"
+    "userNotCreated": "An error as Occured on the create user process",
+    "mongoFindUserError": "An error as occured to find this user in database",
+    "userDoesentExist": "This user doesen't exist",
+    "invalidPassword": "Invalid password",
+    "loginSucess": "Sucessfuly login!"
 
 }
