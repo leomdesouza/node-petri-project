@@ -1,0 +1,8 @@
+{
+
+    "mongooseConnect": "Connected to the database!",
+    "listening": "Listening on ",
+    "userCreated": "User has been created!",
+    "userNotCreated": "An error as Occured on the create user process"
+
+}
