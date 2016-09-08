@@ -11,4 +11,4 @@ The concept of state is synchronous process.
 The concept of transitions is variable atributes.
 
 # System Modeling 
-This file to be open needs the Tapaal Software..
+This file to be open needs the Tapaal Software.
