@@ -17,6 +17,7 @@ mongoose.connect(config.database, function(err){
         console.log(locales.en.mongooseConnect);
     }
 });
+mongoose.Promise = global.Promise;
 
 // app get express informations
 var app = express();

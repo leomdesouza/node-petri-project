@@ -7,6 +7,7 @@
     "mongoFindUserError": "An error as occured to find this user in database",
     "userDoesentExist": "This user doesen't exist",
     "invalidPassword": "Invalid password",
-    "loginSucess": "Sucessfuly login!"
+    "loginSucess": "Sucessfuly login!",
+    "showUsersError": "An error as occured to find users in database"
 
 }
