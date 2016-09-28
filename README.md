@@ -8,7 +8,7 @@ The concept of actions is asynchrounous process.
 The concept of state is synchronous process.
 
 # Transitions
-The concept of transitions is variable atributes.
+The concept of transitions is variable atributes, callbacks, functions, methods or third party requests.
 
 # System Modeling 
 This file to be open needs the Tapaal Software.
