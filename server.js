@@ -26,6 +26,8 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
+
+// Client Actions - API's
 app.use('/clientActions', clientActions(app, express));
 
 // app method listen
