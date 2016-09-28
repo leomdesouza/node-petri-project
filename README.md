@@ -12,3 +12,5 @@ The concept of transitions is variable atributes.
 
 # System Modeling 
 This file to be open needs the Tapaal Software.
+![alt tag](system_modeling.png)
+
