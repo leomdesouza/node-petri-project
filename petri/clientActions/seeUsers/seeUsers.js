@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var showUsers = require('../../clientStates/showUsers.js');
 var tokenAuthentication = require('../../clientStates/tokenAuthentication.js');

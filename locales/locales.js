@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var en = require('./en.json');
 

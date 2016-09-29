@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var userAuthentication = require('../../clientStates/userAuthentication.js');
 
