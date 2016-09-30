@@ -12,8 +12,12 @@ var clientActions = function(app, express){
     clientActions.use('/signUp', signUp(app, express));
     clientActions.use('/login', login(app, express));
 
-    // authenticated apis
+    // Authenticated apis
     clientActions.use('/seeUsers', seeUsers(app, express));
+    clientActions.use('/deviceSignUp', deviceSignUp(app, express));
+    clientActions.use('/configDevice', configDevice(app, express));
+    clientActions.use('/sendInformation', sendInformation(app, express));
+    clientActions.use('/getInformation', getInformation(app, express));
 
     return clientActions;
 
