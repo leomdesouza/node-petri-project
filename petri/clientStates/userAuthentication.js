@@ -9,21 +9,29 @@ var userAuthentication = function(req, res){
 
     User.findOne({ username: req.body.username }, 'password', function(err, user){
         if(err){
-            res.json({ message: locales.en.mongoFindUserError });
+            res.status(500).json({ 
+                message: locales.en.mongoFindUserError 
+            });
             return;
         }
         if(!user){
-            res.json({ message: userDoesentExist });
+            res.status(404).json({
+                message: userDoesentExist 
+            });
             return;
         }
         else if(user){
             var passwordValidation = user.comparePassword(req.body.password);
             if(!passwordValidation){
-                res.json({ message: locales.en.invalidPassword });
+                res.status(401).json({
+                    message: locales.en.invalidPassword 
+                });
             }
             else{
                 var token = tokenCreation(user);
-                res.json({ message: locales.en.loginSucess ,token: token });
+                res.status(200).json({
+                    message: locales.en.loginSucess ,token: token 
+                });
                 return;
             }
         }

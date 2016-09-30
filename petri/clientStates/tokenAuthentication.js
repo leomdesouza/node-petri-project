@@ -2,6 +2,7 @@
 
 var jwt = require('jsonwebtoken');
 var secretKey = require('../../config.js').secretKey;
+var locales = require('../../locales/locales.js');
 
 var tokenAuthentication = function(req, res, next){
 
@@ -10,7 +11,9 @@ var tokenAuthentication = function(req, res, next){
         if(token){
             jwt.verify(token, secretKey, function(err, decoded){
                 if(err){
-                    res.json({ message: 'Invalid!' })
+                    res.status(401).json({
+                        message: locales.en.invalidToken 
+                    });
                 }
                 else{
                     next();
@@ -18,7 +21,9 @@ var tokenAuthentication = function(req, res, next){
             });
         }
         else{
-            res.json({ message: 'Unauthorized!' });
+            res.status(401).json({
+                message: locales.en.tokenNotAuthorized 
+            });
         }
     };
 

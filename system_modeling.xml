@@ -1,83 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
 <net active="true" id="TAPN1" type="P/T net">
-<labels border="true" height="169" positionX="421" positionY="20" width="132">clientStates:
+<labels border="true" height="91" positionX="581" positionY="1" width="100">States:
+e4:
+checkUser.js
 
 e0:
-createUser
+createUser.js
+</labels>
+<labels border="true" height="169" positionX="712" positionY="0" width="135">Actions:
+a0:
+/clientAction/signUp
 
+a5:
+User not exist - next()
+
+a6:
+User exist - Not authorized - 401
+
+a7:
+201 - user created</labels>
+<labels border="true" height="52" positionX="363" positionY="141" width="121">States:
 e1:
-userAuthentication
+userAuthentication.js</labels>
+<labels border="true" height="104" positionX="506" positionY="141" width="128">Actions
+a1:
+/clientActions/login
 
+a8:
+user authorized - 200</labels>
+<labels border="true" height="91" positionX="538" positionY="284" width="135">States:
 e2:
-tokenAuthentication
+tokenAuthentication.js
 
 e3:
-showUsers</labels>
-<labels border="true" height="208" positionX="602" positionY="21" width="147">clientActions
-
-a0:
-/signUp
-
-a1:
-/login
-
+showUsers.js</labels>
+<labels border="true" height="156" positionX="702" positionY="284" width="156">Actions
 a2:
-/seeUsers
+/clientActions/seeUsers
 
 a3:
-Authentication Ok - Next()
+Authentication ok - next()
 
 a4:
-Authentication Failed</labels>
-<place id="e0" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e0" nameOffsetX="18.0" nameOffsetY="-1.0" positionX="195.0" positionY="75.0"/>
-<place id="e1" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e1" nameOffsetX="6.0" nameOffsetY="4.0" positionX="195.0" positionY="165.0"/>
-<place id="e2" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e2" nameOffsetX="5.0" nameOffsetY="-3.0" positionX="195.0" positionY="285.0"/>
-<place id="e3" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e3" nameOffsetX="9.0" nameOffsetY="4.0" positionX="435.0" positionY="285.0"/>
+Not Authenticated - 401
+
+a9:
+200 - show users</labels>
+<place id="e4" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e4" nameOffsetX="8.0" nameOffsetY="1.0" positionX="195.0" positionY="75.0"/>
+<place id="e1" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e1" nameOffsetX="6.0" nameOffsetY="4.0" positionX="195.0" positionY="195.0"/>
+<place id="e2" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e2" nameOffsetX="5.0" nameOffsetY="-3.0" positionX="187.22222222222223" positionY="345.55555555555554"/>
+<place id="e3" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e3" nameOffsetX="9.0" nameOffsetY="4.0" positionX="396.1111111111111" positionY="345.55555555555554"/>
+<place id="e0" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e0" nameOffsetX="13.0" nameOffsetY="0.0" positionX="419.44444444444446" positionY="75.0"/>
 <transition angle="0" id="a0" infiniteServer="false" name="a0" nameOffsetX="-2.0" nameOffsetY="14.0" positionX="75.0" positionY="75.0" priority="0" urgent="false"/>
-<transition angle="0" id="end_0" infiniteServer="false" name="end_0" nameOffsetX="44.0" nameOffsetY="-2.0" positionX="330.0" positionY="75.0" priority="0" urgent="false"/>
-<transition angle="0" id="a1" infiniteServer="false" name="a1" nameOffsetX="3.0" nameOffsetY="22.0" positionX="75.0" positionY="165.0" priority="0" urgent="false"/>
-<transition angle="0" id="a2" infiniteServer="false" name="a2" nameOffsetX="-5.0" nameOffsetY="17.0" positionX="75.0" positionY="285.0" priority="0" urgent="false"/>
-<transition angle="180" id="end_1" infiniteServer="false" name="end_1" nameOffsetX="51.0" nameOffsetY="1.0" positionX="330.0" positionY="165.0" priority="0" urgent="false"/>
-<transition angle="0" id="a3" infiniteServer="false" name="a3" nameOffsetX="19.0" nameOffsetY="-3.0" positionX="300.0" positionY="285.0" priority="0" urgent="false"/>
-<transition angle="0" id="end_2" infiniteServer="false" name="end_2" nameOffsetX="39.0" nameOffsetY="-2.0" positionX="570.0" positionY="285.0" priority="0" urgent="false"/>
-<transition angle="0" id="a4" infiniteServer="false" name="a4" nameOffsetX="31.0" nameOffsetY="4.0" positionX="300.0" positionY="225.0" priority="0" urgent="false"/>
-<arc id="a0 to e0" inscription="1" source="a0" target="e0" type="normal" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="91" yCoord="87"/>
-<arcpath arcPointType="false" id="1" xCoord="192" yCoord="87"/>
+<transition angle="0" id="a5" infiniteServer="false" name="a5" nameOffsetX="34.0" nameOffsetY="-2.0" positionX="315.0" positionY="75.0" priority="0" urgent="false"/>
+<transition angle="0" id="a1" infiniteServer="false" name="a1" nameOffsetX="3.0" nameOffsetY="22.0" positionX="75.0" positionY="195.0" priority="0" urgent="false"/>
+<transition angle="0" id="a2" infiniteServer="false" name="a2" nameOffsetX="-5.0" nameOffsetY="17.0" positionX="67.22222222222221" positionY="345.55555555555554" priority="0" urgent="false"/>
+<transition angle="180" id="a8" infiniteServer="false" name="a8" nameOffsetX="15.444444444444446" nameOffsetY="-0.11111111111111116" positionX="330.0" positionY="195.0" priority="0" urgent="false"/>
+<transition angle="0" id="a3" infiniteServer="false" name="a3" nameOffsetX="19.0" nameOffsetY="-3.0" positionX="292.22222222222223" positionY="345.55555555555554" priority="0" urgent="false"/>
+<transition angle="0" id="a9" infiniteServer="false" name="a9" nameOffsetX="20.111111111111114" nameOffsetY="-2.0" positionX="500.0000000000002" positionY="345.55555555555554" priority="0" urgent="false"/>
+<transition angle="0" id="a4" infiniteServer="false" name="a4" nameOffsetX="31.0" nameOffsetY="-0.44444444444444464" positionX="292.22222222222223" positionY="285.55555555555554" priority="0" urgent="false"/>
+<transition angle="0" id="a7" infiniteServer="false" name="a7" nameOffsetX="23.0" nameOffsetY="-4.0" positionX="524.4444444444443" positionY="75.0" priority="0" urgent="false"/>
+<transition angle="0" id="a6" infiniteServer="false" name="a6" nameOffsetX="33.0" nameOffsetY="2.0" positionX="315.0" positionY="15.0" priority="0" urgent="false"/>
+<arc id="a0 to e0" inscription="1" source="a0" target="e4" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="90" yCoord="85"/>
+<arcpath arcPointType="false" id="1" xCoord="191" yCoord="85"/>
 </arc>
-<arc id="e0 to end" inscription="[0,inf)" source="e0" target="end_0" type="timed" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="221" yCoord="87"/>
-<arcpath arcPointType="false" id="1" xCoord="336" yCoord="87"/>
+<arc id="e0 to end" inscription="[0,inf)" source="e4" target="a5" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="220" yCoord="85"/>
+<arcpath arcPointType="false" id="1" xCoord="320" yCoord="86"/>
 </arc>
 <arc id="a1 to e1" inscription="1" source="a1" target="e1" type="normal" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="91" yCoord="177"/>
-<arcpath arcPointType="false" id="1" xCoord="192" yCoord="177"/>
+<arcpath arcPointType="false" id="0" xCoord="90" yCoord="205"/>
+<arcpath arcPointType="false" id="1" xCoord="191" yCoord="205"/>
 </arc>
 <arc id="a2 to e2" inscription="1" source="a2" target="e2" type="normal" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="91" yCoord="297"/>
-<arcpath arcPointType="false" id="1" xCoord="192" yCoord="297"/>
+<arcpath arcPointType="false" id="0" xCoord="82" yCoord="356"/>
+<arcpath arcPointType="false" id="1" xCoord="183" yCoord="355"/>
 </arc>
-<arc id="e1 to end_1" inscription="[0,inf)" source="e1" target="end_1" type="timed" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="221" yCoord="176"/>
-<arcpath arcPointType="false" id="1" xCoord="337" yCoord="176"/>
+<arc id="e1 to end_1" inscription="[0,inf)" source="e1" target="a8" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="220" yCoord="205"/>
+<arcpath arcPointType="false" id="1" xCoord="335" yCoord="205"/>
 </arc>
 <arc id="e2 to end_2" inscription="[0,inf)" source="e2" target="a3" type="timed" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="221" yCoord="297"/>
-<arcpath arcPointType="false" id="1" xCoord="306" yCoord="297"/>
+<arcpath arcPointType="false" id="0" xCoord="212" yCoord="356"/>
+<arcpath arcPointType="false" id="1" xCoord="297" yCoord="356"/>
 </arc>
 <arc id="a3 to e3" inscription="1" source="a3" target="e3" type="normal" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="316" yCoord="297"/>
-<arcpath arcPointType="false" id="1" xCoord="432" yCoord="297"/>
+<arcpath arcPointType="false" id="0" xCoord="307" yCoord="356"/>
+<arcpath arcPointType="false" id="1" xCoord="392" yCoord="355"/>
 </arc>
-<arc id="e3 to end_2" inscription="[0,inf)" source="e3" target="end_2" type="timed" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="461" yCoord="297"/>
-<arcpath arcPointType="false" id="1" xCoord="576" yCoord="297"/>
+<arc id="e3 to end_2" inscription="[0,inf)" source="e3" target="a9" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="421" yCoord="356"/>
+<arcpath arcPointType="false" id="1" xCoord="505" yCoord="356"/>
 </arc>
 <arc id="e2 to a4" inscription="[0,inf)" source="e2" target="a4" type="timed" weight="1">
-<arcpath arcPointType="false" id="0" xCoord="207" yCoord="282"/>
-<arcpath arcPointType="false" id="1" xCoord="207" yCoord="237"/>
-<arcpath arcPointType="false" id="2" xCoord="306" yCoord="237"/>
+<arcpath arcPointType="false" id="0" xCoord="197" yCoord="341"/>
+<arcpath arcPointType="false" id="1" xCoord="198" yCoord="297"/>
+<arcpath arcPointType="false" id="2" xCoord="297" yCoord="296"/>
+</arc>
+<arc id="a5 to e0" inscription="1" source="a5" target="e0" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="330" yCoord="85"/>
+<arcpath arcPointType="false" id="1" xCoord="415" yCoord="85"/>
+</arc>
+<arc id="e0 to a7" inscription="[0,inf)" source="e0" target="a7" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="444" yCoord="85"/>
+<arcpath arcPointType="false" id="1" xCoord="530" yCoord="86"/>
+</arc>
+<arc id="e4 to a6" inscription="[0,inf)" source="e4" target="a6" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="205" yCoord="71"/>
+<arcpath arcPointType="false" id="1" xCoord="206" yCoord="26"/>
+<arcpath arcPointType="false" id="2" xCoord="320" yCoord="26"/>
 </arc>
 </net>
 <k-bound bound="3"/>

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var User = require('../../app/models/user.js');
 var locales = require('../../locales/locales.js');
@@ -10,16 +10,22 @@ var createUser = function(req, res){
         username: req.body.username,
         password: req.body.password
     });
+
     user.save(function(err){
         if(err){
-            res.json({ message: locales.en.userNotCreated });
+            res.status(500).json({
+                message: locales.en.userNotCreated 
+            });
             return;
         }
         else{
-            res.json({ message: locales.en.userCreated });
+            res.status(201).json({ 
+                message: locales.en.userCreated 
+            });
             return;
         }
     });  
 };
+
 
 module.exports = createUser;

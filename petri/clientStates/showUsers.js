@@ -5,13 +5,16 @@ var locales = require('../../locales/locales.js');
 
 
 var showUsers = function(req, res){
+    
     User.find({}, function(err, users){
         if(err){
-            res.json({ message: locales.en.showUsersError });
+            res.status(500).json({
+                message: locales.en.showUsersError 
+            });
             return;
         }
         else{
-            res.json(users);
+            res.status(200).json(users);
         }
     });
 }
