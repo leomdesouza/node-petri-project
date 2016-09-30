@@ -1,8 +1,8 @@
 'use strict';
 
 var jwt = require('jsonwebtoken');
-var secretKey = require('../../config.js').secretKey;
-var locales = require('../../locales/locales.js');
+var secretKey = require('../../../config.js').secretKey;
+var locales = require('../../../locales/locales.js');
 
 var tokenAuthentication = function(req, res, next){
 

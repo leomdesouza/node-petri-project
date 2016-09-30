@@ -1,8 +1,8 @@
 'use strict';
 
-var checkUserLogin = require('../../clientStates/checkUserLogin.js');
-var passwordValidation = require('../../clientStates/passwordValidation.js');
-var tokenCreation = require('../../clientStates/tokenCreation.js');
+var checkUserLogin = require('../../clientStates/login/checkUserLogin.js');
+var passwordValidation = require('../../clientStates/login/passwordValidation.js');
+var tokenCreation = require('../../clientStates/login/tokenCreation.js');
 
 var login = function(app, express){
 

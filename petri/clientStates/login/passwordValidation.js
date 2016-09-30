@@ -1,7 +1,7 @@
 'use strict';
 
-var User = require('../../app/models/user.js');
-var locales = require('../../locales/locales.js');
+var User = require('../../../app/models/user.js');
+var locales = require('../../../locales/locales.js');
 
 var passwordValidation = function(req, res, next){
 

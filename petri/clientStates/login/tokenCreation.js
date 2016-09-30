@@ -1,9 +1,9 @@
 'use strict';
 
-var User = require('../../app/models/user.js');
-var locales = require('../../locales/locales.js');
+var User = require('../../../app/models/user.js');
+var locales = require('../../../locales/locales.js');
 var jwt = require('jsonwebtoken');
-var config = require('../../config.js');
+var config = require('../../../config.js');
 
 var tokenCreation = function(req, res){
 

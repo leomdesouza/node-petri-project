@@ -1,7 +1,7 @@
 'use strict';
 
-var createUser = require('../../clientStates/createUser.js');
-var checkUserSignUp = require('../../clientStates/checkUserSignUp.js');
+var createUser = require('../../clientStates/signUp/createUser.js');
+var checkUserSignUp = require('../../clientStates/signUp/checkUserSignUp.js');
 
 var signUp = function(app, express){
     
