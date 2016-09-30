@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var signUp = require('./signUp/signUp.js');
 var login = require('./login/login.js');

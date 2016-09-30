@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var User = require('../../app/models/user.js');
 var locales = require('../../locales/locales.js');
