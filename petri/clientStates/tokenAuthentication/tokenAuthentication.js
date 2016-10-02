@@ -12,17 +12,18 @@ var tokenAuthentication = function(req, res, next){
             jwt.verify(token, secretKey, function(err, decoded){
                 if(err){
                     res.status(401).json({
-                        message: locales.en.invalidToken 
+                        message: locales.en.tokenNotAuthorized 
                     });
                 }
                 else{
+                    req.decoded = decoded;
                     next();
                 }
             });
         }
         else{
             res.status(401).json({
-                message: locales.en.tokenNotAuthorized 
+                message: locales.en.tokenNotProvided 
             });
         }
     };

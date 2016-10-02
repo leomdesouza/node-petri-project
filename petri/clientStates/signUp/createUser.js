@@ -16,13 +16,11 @@ var createUser = function(req, res){
             res.status(500).json({
                 message: locales.en.userNotCreated 
             });
-            return;
         }
         else{
             res.status(201).json({ 
                 message: locales.en.userCreated 
             });
-            return;
         }
     });  
 };

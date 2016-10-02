@@ -9,7 +9,10 @@
     "invalidPassword": "Invalid password",
     "loginSucess": "Sucessfuly login!",
     "showUsersError": "An error as occured to find users in database",
-    "invalidToken": "Invalid token",
     "tokenNotAuthorized": "This token is not authorized",
-    "usernameUnauthorized": "This username is not authorized"
+    "tokenNotProvided": "Token not provided",
+    "usernameUnauthorized": "This username is not authorized",
+    "deviceNotCreated": "An error as Occured on the create device process",
+    "deviceCreated": "Device has been created!",
+    "deviceCodeUnauthorized": "This device code is not authorized"
 }
