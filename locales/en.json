@@ -14,5 +14,6 @@
     "usernameUnauthorized": "This username is not authorized",
     "deviceNotCreated": "An error as Occured on the create device process",
     "deviceCreated": "Device has been created!",
-    "deviceCodeUnauthorized": "This device code is not authorized"
+    "deviceCodeUnauthorized": "This device code is not authorized",
+    "deviceTokenSucess": "This device are authorized"
 }

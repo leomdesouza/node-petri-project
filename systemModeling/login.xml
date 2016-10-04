@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+<net active="true" id="TAPN1" type="P/T net">
+<labels border="true" height="260" positionX="586" positionY="42" width="161">Actions:
+a0:
+/clientActions/login
+
+a1:
+User exist - next()
+
+a2:
+User not exist - 401 - Unauthorized
+
+a3:
+Password Authorized - next()
+
+a4:
+Password not authorized - 401 - Unauthorized
+
+a5:
+202 - Token Created</labels>
+<labels border="true" height="118" positionX="781" positionY="38" width="146">States:
+e0:
+checkUserLogin.js
+
+e1:
+passwordValidation.js
+
+e2:
+tokenCreation.js</labels>
+<place id="e0" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e0" nameOffsetX="41.0" nameOffsetY="0.0" positionX="105.0" positionY="135.0"/>
+<place id="e1" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e1" nameOffsetX="40.0" nameOffsetY="3.0" positionX="270.0" positionY="135.0"/>
+<place id="e2" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e2" nameOffsetX="40.0" nameOffsetY="1.0" positionX="450.0" positionY="135.0"/>
+<transition angle="0" id="a0" infiniteServer="false" name="a0" nameOffsetX="10.0" nameOffsetY="-3.0" positionX="30.0" positionY="135.0" priority="0" urgent="false"/>
+<transition angle="0" id="a1" infiniteServer="false" name="a1" nameOffsetX="33.0" nameOffsetY="-3.0" positionX="180.0" positionY="135.0" priority="0" urgent="false"/>
+<transition angle="0" id="a2" infiniteServer="false" name="a2" nameOffsetX="27.0" nameOffsetY="-5.0" positionX="180.0" positionY="60.0" priority="0" urgent="false"/>
+<transition angle="0" id="a3" infiniteServer="false" name="a3" nameOffsetX="28.0" nameOffsetY="-4.0" positionX="360.0" positionY="135.0" priority="0" urgent="false"/>
+<transition angle="0" id="a4" infiniteServer="false" name="a4" nameOffsetX="31.0" nameOffsetY="-1.0" positionX="360.0" positionY="60.0" priority="0" urgent="false"/>
+<transition angle="0" id="a5" infiniteServer="false" name="a5" nameOffsetX="29.0" nameOffsetY="1.0" positionX="540.0" positionY="135.0" priority="0" urgent="false"/>
+<arc id="a0 to e0" inscription="1" source="a0" target="e0" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="46" yCoord="147"/>
+<arcpath arcPointType="false" id="1" xCoord="102" yCoord="147"/>
+</arc>
+<arc id="e0 to a2" inscription="[0,inf)" source="e0" target="a2" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="117" yCoord="132"/>
+<arcpath arcPointType="false" id="1" xCoord="118" yCoord="73"/>
+<arcpath arcPointType="false" id="2" xCoord="186" yCoord="72"/>
+</arc>
+<arc id="e0 to a1" inscription="[0,inf)" source="e0" target="a1" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="131" yCoord="147"/>
+<arcpath arcPointType="false" id="1" xCoord="186" yCoord="147"/>
+</arc>
+<arc id="a1 to e1" inscription="1" source="a1" target="e1" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="196" yCoord="147"/>
+<arcpath arcPointType="false" id="1" xCoord="267" yCoord="147"/>
+</arc>
+<arc id="e1 to a4" inscription="[0,inf)" source="e1" target="a4" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="282" yCoord="132"/>
+<arcpath arcPointType="false" id="1" xCoord="283" yCoord="73"/>
+<arcpath arcPointType="false" id="2" xCoord="366" yCoord="72"/>
+</arc>
+<arc id="e1 to a3" inscription="[0,inf)" source="e1" target="a3" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="296" yCoord="147"/>
+<arcpath arcPointType="false" id="1" xCoord="366" yCoord="147"/>
+</arc>
+<arc id="a3 to e2" inscription="1" source="a3" target="e2" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="376" yCoord="147"/>
+<arcpath arcPointType="false" id="1" xCoord="447" yCoord="147"/>
+</arc>
+<arc id="e2 to a5" inscription="[0,inf)" source="e2" target="a5" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="476" yCoord="147"/>
+<arcpath arcPointType="false" id="1" xCoord="546" yCoord="147"/>
+</arc>
+</net>
+<k-bound bound="3"/>
+</pnml>
