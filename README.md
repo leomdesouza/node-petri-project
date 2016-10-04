@@ -1,4 +1,4 @@
-# Connecting World Project
+# Connecting the World Project
 This project uses the Petri Net in your system modeling.
 
 This is the server that will connect all the hardware and manage them.
