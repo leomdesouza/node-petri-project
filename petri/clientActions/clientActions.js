@@ -10,7 +10,7 @@ var configDevice = require('./configDevice/configDevice.js');
 var clientActions = function(app, express){
 
     var clientActions = express();
-    var auth = express();
+
     // Unauthenticated apis
     clientActions.use('/signUp', signUp(app, express));
     clientActions.use('/login', login(app, express));
