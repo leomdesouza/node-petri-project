@@ -1,5 +1,7 @@
-# node-petri-project
-On this project I will make an example to implements Petri's Net in Node.js.
+# Connecting World Project
+This project uses the Petri Net in your system modeling.
+
+This is the server that will connect all the hardware and manage them.
 
 # Actions
 The concept of actions is asynchrounous process.
