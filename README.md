@@ -15,6 +15,11 @@ The concept of transitions is variable atributes, callbacks, functions, methods 
 # System Modeling 
 This files to be open needs the Tapaal Software.
 
+# Server Modeling
+![alt tag](systemModeling/images/server.png)
+
+# Application Modeling
+
 ## signUp
 ![alt tag](systemModeling/images/signUp.png)
 

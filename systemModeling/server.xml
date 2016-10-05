@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.informatik.hu-berlin.de/top/pnml/ptNetb">
+<net active="true" id="TAPN1" type="P/T net">
+<labels border="true" height="130" positionX="303" positionY="26" width="100">Actions:
+a0:
+Start server.js
+
+a1:
+Application is Running 
+
+
+</labels>
+<labels border="true" height="130" positionX="449" positionY="27" width="100">States:
+e0:
+Database connection
+
+e1:
+Setup http connections
+
+</labels>
+<place id="e0" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e0" nameOffsetX="1.0" nameOffsetY="5.0" positionX="80.0" positionY="135.0"/>
+<place id="e1" initialMarking="0" invariant="&lt; inf" markingOffsetX="0.0" markingOffsetY="0.0" name="e1" nameOffsetX="43.0" nameOffsetY="3.0" positionX="220.0" positionY="136.0"/>
+<transition angle="90" id="a0" infiniteServer="false" name="a0" nameOffsetX="41.0" nameOffsetY="6.0" positionX="150.0" positionY="45.0" priority="0" urgent="false"/>
+<transition angle="90" id="a1" infiniteServer="false" name="a1" nameOffsetX="47.0" nameOffsetY="6.0" positionX="150.0" positionY="216.0" priority="0" urgent="false"/>
+<arc id="a0 to e0" inscription="1" source="a0" target="e0" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="156" yCoord="61"/>
+<arcpath arcPointType="false" id="1" xCoord="101" yCoord="135"/>
+</arc>
+<arc id="a0 to e1" inscription="1" source="a0" target="e1" type="normal" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="166" yCoord="62"/>
+<arcpath arcPointType="false" id="1" xCoord="222" yCoord="136"/>
+</arc>
+<arc id="e0 to a1" inscription="[0,inf)" source="e0" target="a1" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="101" yCoord="158"/>
+<arcpath arcPointType="false" id="1" xCoord="156" yCoord="222"/>
+</arc>
+<arc id="e1 to a1" inscription="[0,inf)" source="e1" target="a1" type="timed" weight="1">
+<arcpath arcPointType="false" id="0" xCoord="222" yCoord="159"/>
+<arcpath arcPointType="false" id="1" xCoord="166" yCoord="223"/>
+</arc>
+</net>
+<k-bound bound="3"/>
+</pnml>
