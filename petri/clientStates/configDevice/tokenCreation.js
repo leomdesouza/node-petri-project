@@ -16,6 +16,7 @@ var tokenCreation = function(req, res){
         else{
             var token = jwt.sign({
                 id: device.id,
+                deviceOwner: device.deviceOwner,
                 deviceName: device.deviceName,
                 deviceCode: device.deviceCode,
                 deviceVersion: device.deviceVersion,
