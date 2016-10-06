@@ -6,6 +6,7 @@ var seeUsers = require('./seeUsers/seeUsers.js');
 var deviceSignUp = require('./deviceSignUp/deviceSignUp.js');
 var thisUser = require('./thisUser/thisUser.js');
 var configDevice = require('./configDevice/configDevice.js');
+var informations = require('./informations/informations.js');
 
 var clientActions = function(app, express){
 
@@ -20,8 +21,7 @@ var clientActions = function(app, express){
     clientActions.use('/thisUser', thisUser(app, express));
     clientActions.use('/seeUsers', seeUsers(app, express));
     clientActions.use('/deviceSignUp', deviceSignUp(app, express));
-    //clientActions.use('/sendInformation', sendInformation(app, express));
-    //clientActions.use('/getInformation', getInformation(app, express));
+    clientActions.use('/information', informations(app, express));
 
     return clientActions;
 
