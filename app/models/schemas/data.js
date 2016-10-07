@@ -12,4 +12,4 @@ var DataSchema = new Schema({
     dataString: [{ type: String }]
 });
 
-module.exports = DeviceSchema;
+module.exports = DataSchema;
