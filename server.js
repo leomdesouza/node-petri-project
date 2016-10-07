@@ -9,7 +9,7 @@ var config = require('./config.js');
 var locales = require('./locales/locales.js');
 
 // database connection
-mongoose.connect(config.database, function(err){
+mongoose.connect(config.mongoLabDatabase, function(err){
     if(err){
         console.log(err);
     }
