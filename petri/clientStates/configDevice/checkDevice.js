@@ -1,6 +1,6 @@
 'use strict';
 
-var Device = require('../../../app/models/Device.js');
+var Device = require('../../../app/models/device.js');
 var locales = require('../../../locales/locales.js');
 
 

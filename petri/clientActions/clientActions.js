@@ -21,7 +21,7 @@ var clientActions = function(app, express){
     clientActions.use('/thisUser', thisUser(app, express));
     clientActions.use('/seeUsers', seeUsers(app, express));
     clientActions.use('/deviceSignUp', deviceSignUp(app, express));
-    clientActions.use('/information', informations(app, express));
+    //clientActions.use('/information', informations(app, express));
 
     return clientActions;
 
