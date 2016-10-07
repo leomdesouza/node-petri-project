@@ -22,7 +22,6 @@ var tokenCreation = function(req, res){
                 expiresIn: '24h'
             });
             res.status(202).json({ 
-                status: res.status,
                 message: locales.en.loginSucess,
                 token: token
             });
