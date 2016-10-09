@@ -9,7 +9,8 @@ var DeviceSchema = new Schema({
     deviceName: { type: String, required: true },
     deviceCode: { type: String, required: true, index: { unique: true } },
     deviceVersion: { type: String, required: true },
-    deviceType: { type: String, required: true }
+    deviceType: { type: String, required: true },
+    deviceIp: { type: String, required: true, index: { unique: true } }
 });
 
 module.exports = DeviceSchema;
