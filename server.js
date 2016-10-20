@@ -23,6 +23,7 @@ mongoose.Promise = global.Promise;
 var app = express();
 
 // app method use
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
